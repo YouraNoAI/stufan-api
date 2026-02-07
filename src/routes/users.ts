@@ -3,7 +3,7 @@ import { db } from "../db";
 
 export const usersRoutes = new Elysia({ prefix: "/users" })
   .get("/", async () => {
-    const [rows] = await db.query("SELECT id, name, email, role, created_at FROM users");
+    const rows = await db.query("SELECT id, name, email, role, created_at FROM users");
     return rows;
   })
   .post(

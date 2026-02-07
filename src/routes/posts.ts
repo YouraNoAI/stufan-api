@@ -4,7 +4,7 @@ import { db } from "../db";
 export const postRoutes = new Elysia({ prefix: "/posts" })
 
   .get("/", async () => {
-    const [rows] = await db.query("SELECT * FROM posts WHERE published = true ORDER BY created_at DESC");
+    const rows = await db.query("SELECT * FROM posts WHERE published = true ORDER BY created_at DESC");
     return rows;
   })
 
