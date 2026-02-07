@@ -17,4 +17,4 @@ const app = new Elysia()
 .use(submissionRoutes)
 .use(postRoutes)
 
-app.listen(3000)
+module.exports = app
