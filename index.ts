@@ -1,4 +1,4 @@
-import { Elysia } from "elysia";
+import Elysia from "elysia";
 import cors from "@elysiajs/cors";
 
 import { initRoutes } from "./src/routes/init";
@@ -9,12 +9,16 @@ import { submissionRoutes } from "./src/routes/submissions";
 import { postRoutes } from "./src/routes/posts";
 
 const app = new Elysia()
-.use(cors())
-.use(initRoutes)
-.use(usersRoutes)
-.use(attendanceRoutes)
-.use(assignmentRoutes)
-.use(submissionRoutes)
-.use(postRoutes)
+  .use(cors())
+  .use(initRoutes)
+  .use(usersRoutes)
+  .use(attendanceRoutes)
+  .use(assignmentRoutes)
+  .use(submissionRoutes)
+  .use(postRoutes);
 
-module.exports = app
+app.listen(3000);
+
+console.log("🚀 Server running on http://localhost:3000");
+
+export default app;

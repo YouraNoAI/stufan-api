@@ -9,13 +9,9 @@
         "dotenv": "^17.2.4",
         "elysia": "^1.4.22",
         "mysql2": "^3.16.3",
-        "serverless-mysql": "^2.1.0",
       },
       "devDependencies": {
         "@types/bun": "latest",
-      },
-      "peerDependencies": {
-        "typescript": "^5",
       },
     },
   },
@@ -79,8 +75,6 @@
     "safer-buffer": ["safer-buffer@2.1.2", "", {}, ""],
 
     "seq-queue": ["seq-queue@0.0.5", "", {}, ""],
-
-    "serverless-mysql": ["serverless-mysql@2.1.0", "", { "dependencies": { "mysql2": "^3.12.0" } }, "sha512-EwSn5uYe4u64kWiRRAJkk2XIF+qPC3xKc92efMhYTbwSqnJ69v8Bx1LY5po0wuJff8QLxu3VAURNiEbQXiftgA=="],
 
     "sqlstring": ["sqlstring@2.3.3", "", {}, ""],
 
