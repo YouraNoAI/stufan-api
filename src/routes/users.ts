@@ -56,8 +56,7 @@ export const usersRoutes = new Elysia({ prefix: "/users" })
       const { name, email, role } = body;
 
       await db.query(
-        "UPDATE users SET name = ?, email = ?, role = ? WHERE id = ?",
-        [name, email, role, params.id]
+        "UPDATE users SET name = ?, email = ?, password = ?, role = ?, WHERE id = ?", name, email, password, role, params.id]
       );
 
       return { message: "User updated" };
